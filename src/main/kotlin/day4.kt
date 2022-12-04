@@ -59,8 +59,8 @@ fun solution2(items : List<List<element>>) =
                 // partial overlap
                 ( it[0].node != it[1].node && it[1].node != it[2].node) || (it[1].node != it[2].node && it[1].x == it[2].x)
     }
-        .onEach { println(it) }
-        .count()
+    .onEach { println(it) }
+    .count()
 
 fun main() {
     val sacks = readData(samples)
