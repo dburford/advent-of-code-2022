@@ -40,7 +40,7 @@ fun readData(str: String) =
 
 fun solution1(items : List<List<element>>) =
     items.count {
-        // middle values from different nodes
+        // middle values from same nodes
         it[1].node == it[2].node ||
                 // OR first two values from different nodes, but equal
                 ((it[0].node != it[1].node) && (it[0].x == it[1].x)) || (it[0].x == it[1].x && it[1].x == it[2].x) ||
