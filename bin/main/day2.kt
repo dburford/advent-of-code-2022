@@ -1,8 +1,9 @@
-package day1
+package day2
 
+import printGrid
 import java.io.File
 
-val inputFile = "/day1.txt"
+val inputFile = "/day2.txt"
 
 val samples = """
         1000
@@ -30,13 +31,13 @@ fun readData(str: String): List<List<Int>> {
         }
 }
 
-// day 1 #1
+// day 2 #1
 fun solution1(items: List<List<Int>>) =
     items
         .map { it.sum() }
         .maxOrNull()
 
-// day 1 #2
+// day 2 #2
 fun solution2(items: List<List<Int>>) =
     items
         .map { it.sum() }
@@ -45,7 +46,7 @@ fun solution2(items: List<List<Int>>) =
         .sum()
 
 fun main() {
-    val filedata = File("src/main/resources/day1.txt").readText()
+    val filedata = File("src/main/resources/day2.txt").readText()
     // val input = readData(samples)
     val input = readData(filedata)
     println(solution1(input))

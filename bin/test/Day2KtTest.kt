@@ -1,9 +1,9 @@
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
 
-import day1.*
+import day2.*
 
-internal class Day1KtTest {
+internal class Day2KtTest {
 
     @Test
     fun `should handle part 1 sample test data`() {
