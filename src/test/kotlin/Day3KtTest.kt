@@ -1,4 +1,5 @@
 import day3.*
+import aoc.util.loadFromResource
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*

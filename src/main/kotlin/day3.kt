@@ -20,7 +20,7 @@ fun charToInt(c : Char) =
 fun String.stringToIntList() =
     this.toList().map ( ::charToInt  )
 
-fun readData(str: String) = //: List< Pair<List<Int>, List<Int> >> {
+fun readData(str: String) =
     str
         .lines()
         .map{
@@ -37,14 +37,10 @@ fun solution1(sacks: List<Pair<List<Int>, List<Int>>>) =
         q.first { p.toHashSet().contains(it) }
     }
 
-fun setNthBit(n: ULong, k: Int): ULong { //= (1UL shl k or n )
-//    print("${k},")
-    return (1UL shl k or n )
-}
+fun setNthBit(n: ULong, k: Int) =  (1UL shl k or n )
 
 // determine position of first set bit
-fun log2(n : ULong ) =
-    n.countTrailingZeroBits()
+fun log2(n : ULong ) = n.countTrailingZeroBits()
 
 fun solution2Bitmaps(sacks: List<Pair<List<Int>, List<Int>>>) =
     sacks

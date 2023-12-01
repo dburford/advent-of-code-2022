@@ -11,8 +11,7 @@ val samples = """
         2-6,4-8
     """.trimIndent()
 
-data class element ( val x: Int, val node: Int )
-
+data class Element ( val x: Int, val node: Int )
 
 fun readData(str: String) =
     str
@@ -26,7 +25,7 @@ fun readData(str: String) =
                 }
                 .mapIndexed { i, e ->
                     e.map {
-                        element(it, i)
+                        Element(it, i)
                     }
                 }
                 .flatMap {
@@ -38,7 +37,7 @@ fun readData(str: String) =
         }
 
 
-fun solution1(items : List<List<element>>) =
+fun solution1(items : List<List<Element>>) =
     items.count {
         // middle values from same nodes
         it[1].node == it[2].node ||
@@ -48,7 +47,7 @@ fun solution1(items : List<List<element>>) =
                 ((it[2].node != it[3].node) && (it[2].x == it[3].x)) || (it[1].x == it[2].x && it[2].x == it[3].x)
     }
 
-fun solution2(items : List<List<element>>) =
+fun solution2(items : List<List<Element>>) =
     items.filter {
         // middle values from different nodes
         it[1].node == it[2].node ||
@@ -59,7 +58,7 @@ fun solution2(items : List<List<element>>) =
                 // partial overlap
                 ( it[0].node != it[1].node && it[1].node != it[2].node) || (it[1].node != it[2].node && it[1].x == it[2].x)
     }
-    .onEach { println(it) }
+    // .onEach { println(it) }
     .count()
 
 fun main() {

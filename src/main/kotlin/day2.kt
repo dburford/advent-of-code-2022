@@ -26,18 +26,18 @@ enum class Hand(val v: Int) {
     // I'll win against this
     fun winsAgainst() =
         when(this) {
-            Hand.ROCK -> Hand.SCISSORS // rock v paper
-            Hand.PAPER -> Hand.ROCK // paper v scissors
-            Hand.SCISSORS -> Hand.PAPER // scissors v rock
+            Hand.ROCK -> Hand.SCISSORS
+            Hand.PAPER -> Hand.ROCK
+            Hand.SCISSORS -> Hand.PAPER
         }
     // Hand.fromVal( ((me.val + 1) % 3) + 1 )  // value that will lose
 
     // I'll lose against this
     fun losesAgainst() =
         when(this) {
-            Hand.ROCK -> Hand.PAPER // rock v paper
-            Hand.PAPER -> Hand.SCISSORS // paper v scissors
-            Hand.SCISSORS -> Hand.ROCK // scissors v rock
+            Hand.ROCK -> Hand.PAPER
+            Hand.PAPER -> Hand.SCISSORS
+            Hand.SCISSORS -> Hand.ROCK
         }
 
     companion object {

@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
 
+import aoc.util.loadFromResource
 import day2.*
 
 internal class Day2KtTest {
